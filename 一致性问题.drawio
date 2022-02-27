@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-27T09:23:46.071Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="8z012AY6lrKUXaR-_iFC" version="16.6.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-02-27T15:26:48.362Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="BL1w1B7MrjxB4fv_DzAA" version="16.6.4" type="github" pages="4">
   <diagram id="eBaj-pGgXzmJQUnzpZiH" name="第 1 页">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -71,13 +71,13 @@
             <mxPoint x="197" y="335" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="08FxaviglqU0u9MPpXU4-37" value="&lt;h1&gt;W1:写单个分片&lt;/h1&gt;&lt;p&gt;1，一个事务只对一个分片操作，转换成单节点事务。MVCC机制可确保单节点的事务一致性。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;2，&lt;font color=&quot;#ff0000&quot;&gt;因为在每个数据分片内部存在多个副本，所以如何保证副本之间的数据一致性，也是一个典型的多副本数据一致性问题&lt;/font&gt;。（解决方案：Paxos、Raft）" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;fontColor=#0000CC;" parent="1" vertex="1">
+        <mxCell id="08FxaviglqU0u9MPpXU4-37" value="&lt;h1&gt;W1:写单个分片&lt;/h1&gt;&lt;p&gt;1，一个事务只对一个分片操作，转换成单节点事务。MVCC机制可确保单节点的事务一致性。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;2，因为在每个数据分片内部存在多个副本，所以如何保证副本之间的数据一致性，也是一个&lt;font color=&quot;#ff0000&quot;&gt;典型的多副本间的数据一致性问题&lt;/font&gt;。（解决方案：Paxos、Raft）" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="590" y="160" width="190" height="260" as="geometry" />
         </mxCell>
         <mxCell id="08FxaviglqU0u9MPpXU4-40" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;W1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="106" y="180" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DcJtvNyYdHpqMct7U6Ko-1" value="&lt;font color=&quot;#ff0000&quot;&gt;多副本间的写一致性问题&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="DcJtvNyYdHpqMct7U6Ko-1" value="&lt;font color=&quot;#ff0000&quot;&gt;多副本间的写一致性问题&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="245" y="320" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
@@ -88,55 +88,55 @@
       <root>
         <mxCell id="BoTSj1O7su90QlymKtr2-0" />
         <mxCell id="BoTSj1O7su90QlymKtr2-1" parent="BoTSj1O7su90QlymKtr2-0" />
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-0" value="&lt;h1&gt;说明：&lt;/h1&gt;&lt;p&gt;三个分片：A,B,C&lt;br&gt;每个分片有2个副本：A1,A2,A3，其中A1是Leader分片，A2,A3是Follower分片&lt;br&gt;有三个节点N1,N2,N3&lt;/p&gt;&lt;p&gt;所有的操作都在同一个事务下。并且只探讨写主，读主从的场景。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-0" value="&lt;h1&gt;说明：&lt;/h1&gt;&lt;p&gt;三个分片：A,B,C&lt;br&gt;每个分片有2个副本：A1,A2,A3，其中A1是Leader分片，A2,A3是Follower分片&lt;br&gt;有三个节点N1,N2,N3&lt;/p&gt;&lt;p&gt;所有的操作都在同一个事务下。并且只探讨写主，读主从的场景。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
           <mxGeometry x="40" y="30" width="520" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-1" value="N1" style="swimlane;rounded=1;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-1" value="N1" style="swimlane;rounded=1;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
           <mxGeometry x="91" y="270" width="110" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-2" value="&lt;font color=&quot;#ff0000&quot;&gt;A1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-2" value="&lt;font color=&quot;#ff0000&quot;&gt;A1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-1" vertex="1">
           <mxGeometry x="16" y="40" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-3" value="&lt;font color=&quot;#0000cc&quot;&gt;B2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-3" value="&lt;font color=&quot;#0000cc&quot;&gt;B2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-1" vertex="1">
           <mxGeometry x="15" y="80" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-4" value="&lt;font color=&quot;#0000cc&quot;&gt;C3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-4" value="&lt;font color=&quot;#0000cc&quot;&gt;C3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-1" vertex="1">
           <mxGeometry x="15" y="120" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-6" value="N1" style="swimlane;rounded=1;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-6" value="N1" style="swimlane;rounded=1;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
           <mxGeometry x="414" y="270" width="110" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-7" value="&lt;font color=&quot;#ff0000&quot;&gt;B1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-6">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-7" value="&lt;font color=&quot;#ff0000&quot;&gt;B1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-6" vertex="1">
           <mxGeometry x="16" y="40" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-8" value="&lt;font color=&quot;#0000cc&quot;&gt;A3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-6">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-8" value="&lt;font color=&quot;#0000cc&quot;&gt;A3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-6" vertex="1">
           <mxGeometry x="15" y="80" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-9" value="&lt;font color=&quot;#0000cc&quot;&gt;C2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-6">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-9" value="&lt;font color=&quot;#0000cc&quot;&gt;C2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-6" vertex="1">
           <mxGeometry x="15" y="120" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-10" value="N1" style="swimlane;rounded=1;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-10" value="N1" style="swimlane;rounded=1;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
           <mxGeometry x="245" y="460" width="110" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-11" value="&lt;font color=&quot;#ff0000&quot;&gt;C1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-10">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-11" value="&lt;font color=&quot;#ff0000&quot;&gt;C1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-10" vertex="1">
           <mxGeometry x="16" y="40" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-12" value="&lt;font color=&quot;#0000cc&quot;&gt;B3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-10">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-12" value="&lt;font color=&quot;#0000cc&quot;&gt;B3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-10" vertex="1">
           <mxGeometry x="15" y="80" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-13" value="&lt;font color=&quot;#0000cc&quot;&gt;A2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="SNT9MTLN4JLw2WHyb_En-10">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-13" value="&lt;font color=&quot;#0000cc&quot;&gt;A2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="SNT9MTLN4JLw2WHyb_En-10" vertex="1">
           <mxGeometry x="15" y="120" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-14" value="网络" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;fontColor=#0000CC;dashed=1;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-14" value="网络" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;fontColor=#0000CC;dashed=1;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
           <mxGeometry x="280" y="360" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-15" value="" style="endArrow=none;startArrow=none;html=1;rounded=0;fontColor=#0000CC;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;strokeColor=#FF0000;startFill=0;endFill=0;" edge="1" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-14" target="SNT9MTLN4JLw2WHyb_En-2">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-15" value="" style="endArrow=none;startArrow=none;html=1;rounded=0;fontColor=#0000CC;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;strokeColor=#FF0000;startFill=0;endFill=0;" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-14" target="SNT9MTLN4JLw2WHyb_En-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="410" as="sourcePoint" />
             <mxPoint x="440" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-16" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;fontColor=#0000CC;strokeColor=#FF0000;entryX=-0.075;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=0;" edge="1" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-13" target="SNT9MTLN4JLw2WHyb_En-14">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-16" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;fontColor=#0000CC;strokeColor=#FF0000;entryX=-0.075;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=0;" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-13" target="SNT9MTLN4JLw2WHyb_En-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="230" y="590" as="sourcePoint" />
             <mxPoint x="201" y="500" as="targetPoint" />
@@ -146,33 +146,140 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-17" value="" style="endArrow=none;startArrow=none;html=1;rounded=0;fontColor=#0000CC;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;strokeColor=#FF0000;startFill=0;endFill=0;" edge="1" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-8" target="SNT9MTLN4JLw2WHyb_En-14">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-17" value="" style="endArrow=none;startArrow=none;html=1;rounded=0;fontColor=#0000CC;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;strokeColor=#FF0000;startFill=0;endFill=0;" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-8" target="SNT9MTLN4JLw2WHyb_En-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="295.85786437626894" y="375.85786437626894" as="sourcePoint" />
             <mxPoint x="197" y="335" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-18" value="&lt;h1&gt;W2:写多个分片&lt;/h1&gt;&lt;p&gt;1，一个事务写多个数据分片，这就是典型的分布式事务了。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;2，&lt;font color=&quot;#ff0000&quot;&gt;因为在每个数据分片内部存在多个副本，所以如何保证副本之间的数据一致性，也是一个典型的多副本数据一致性问题&lt;/font&gt;。（解决方案：Paxos、Raft）" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;fontColor=#0000CC;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-18" value="&lt;h1&gt;W2:写多个分片&lt;/h1&gt;&lt;p&gt;1，一个事务写多个数据分片，这就是典型的分布式事务了。需要借助2PC（两阶段提交）来确保跨节点写操作的原子性。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;2，同时，每个分片依然是有多个副本。所以，依然要解决&lt;font color=&quot;#ff0000&quot;&gt;多副本间的数据一致性问题&lt;/font&gt;。" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;fontColor=#0000CC;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
           <mxGeometry x="590" y="160" width="190" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-19" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 16px&quot;&gt;W2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontColor=#0000CC;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
-          <mxGeometry x="280" y="180" width="60" height="30" as="geometry" />
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-19" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 16px&quot;&gt;W2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontColor=#0000CC;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
+          <mxGeometry x="276" y="180" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-20" value="&lt;font color=&quot;#ff0000&quot;&gt;多副本间的写一致性问题&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
-          <mxGeometry x="245" y="320" width="140" height="30" as="geometry" />
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-20" value="&lt;font color=&quot;#ff0000&quot;&gt;2，多副本间的写一致性问题&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="BoTSj1O7su90QlymKtr2-1" vertex="1">
+          <mxGeometry x="230" y="320" width="155" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-22" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontColor=#FF0000;width=10;endSize=2.26;dashed=1;strokeColor=#FF0000;" edge="1" parent="BoTSj1O7su90QlymKtr2-1">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-22" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontColor=#FF0000;width=10;endSize=2.26;dashed=1;strokeColor=#FF0000;" parent="BoTSj1O7su90QlymKtr2-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="290" y="200" as="sourcePoint" />
             <mxPoint x="160" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SNT9MTLN4JLw2WHyb_En-23" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontColor=#FF0000;width=10;endSize=2.26;dashed=1;strokeColor=#FF0000;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BoTSj1O7su90QlymKtr2-1" source="SNT9MTLN4JLw2WHyb_En-19" target="SNT9MTLN4JLw2WHyb_En-7">
+        <mxCell id="SNT9MTLN4JLw2WHyb_En-23" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontColor=#FF0000;width=10;endSize=2.26;dashed=1;strokeColor=#FF0000;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="BoTSj1O7su90QlymKtr2-1" target="SNT9MTLN4JLw2WHyb_En-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="340" y="210" as="sourcePoint" />
+            <mxPoint x="320" y="200" as="sourcePoint" />
             <mxPoint x="210" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="b7Uxpt3gaAhau05YBvLj-0" value="&lt;font color=&quot;#ff0000&quot;&gt;1，跨节点写操作的原子性问题&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="BoTSj1O7su90QlymKtr2-1">
+          <mxGeometry x="220" y="299" width="180" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Govf5EYtpfEDOgnzXB6r" name="第 3 页">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0bu39Hk5Qwi8QEBn3dwa-0" />
+        <mxCell id="0bu39Hk5Qwi8QEBn3dwa-1" parent="0bu39Hk5Qwi8QEBn3dwa-0" />
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-0" value="&lt;h1&gt;说明：&lt;/h1&gt;&lt;p&gt;三个分片：A,B,C&lt;br&gt;每个分片有2个副本：A1,A2,A3，其中A1是Leader分片，A2,A3是Follower分片&lt;br&gt;有三个节点N1,N2,N3&lt;/p&gt;&lt;p&gt;所有的操作都在同一个事务下。并且只探讨写主，读主从的场景。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="40" y="30" width="520" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-1" value="N1" style="swimlane;rounded=1;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="91" y="270" width="110" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-2" value="&lt;font color=&quot;#ff0000&quot;&gt;A1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-1">
+          <mxGeometry x="16" y="40" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-3" value="&lt;font color=&quot;#0000cc&quot;&gt;B2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-1">
+          <mxGeometry x="15" y="80" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-4" value="&lt;font color=&quot;#0000cc&quot;&gt;C3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-1">
+          <mxGeometry x="15" y="120" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-5" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;rounded=1;dashed=1;fontColor=#0000CC;strokeColor=#FF0000;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-1">
+          <mxGeometry x="35" y="-60" width="14" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-6" value="N1" style="swimlane;rounded=1;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="414" y="270" width="110" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-7" value="&lt;font color=&quot;#ff0000&quot;&gt;B1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-6">
+          <mxGeometry x="16" y="40" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-8" value="&lt;font color=&quot;#0000cc&quot;&gt;A3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-6">
+          <mxGeometry x="15" y="80" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-9" value="&lt;font color=&quot;#0000cc&quot;&gt;C2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-6">
+          <mxGeometry x="15" y="120" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-10" value="N1" style="swimlane;rounded=1;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="245" y="460" width="110" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-11" value="&lt;font color=&quot;#ff0000&quot;&gt;C1&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-10">
+          <mxGeometry x="16" y="40" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-12" value="&lt;font color=&quot;#0000cc&quot;&gt;B3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-10">
+          <mxGeometry x="15" y="80" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-13" value="&lt;font color=&quot;#0000cc&quot;&gt;A2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="b-UJJuOl_csqAkSLvI6c-10">
+          <mxGeometry x="15" y="120" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-14" value="网络" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;fontColor=#0000CC;dashed=1;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="280" y="360" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-15" value="" style="endArrow=none;startArrow=none;html=1;rounded=0;fontColor=#0000CC;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;dashed=1;strokeColor=#FF0000;startFill=0;endFill=0;" edge="1" parent="0bu39Hk5Qwi8QEBn3dwa-1" source="b-UJJuOl_csqAkSLvI6c-14" target="b-UJJuOl_csqAkSLvI6c-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="410" as="sourcePoint" />
+            <mxPoint x="440" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-16" value="" style="curved=1;endArrow=none;html=1;rounded=0;dashed=1;fontColor=#0000CC;strokeColor=#FF0000;entryX=-0.075;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=0;" edge="1" parent="0bu39Hk5Qwi8QEBn3dwa-1" source="b-UJJuOl_csqAkSLvI6c-13" target="b-UJJuOl_csqAkSLvI6c-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="590" as="sourcePoint" />
+            <mxPoint x="201" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="570" />
+              <mxPoint x="151" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-17" value="" style="endArrow=none;startArrow=none;html=1;rounded=0;fontColor=#0000CC;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;strokeColor=#FF0000;startFill=0;endFill=0;" edge="1" parent="0bu39Hk5Qwi8QEBn3dwa-1" source="b-UJJuOl_csqAkSLvI6c-8" target="b-UJJuOl_csqAkSLvI6c-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="295.85786437626894" y="375.85786437626894" as="sourcePoint" />
+            <mxPoint x="197" y="335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-18" value="&lt;h1&gt;分两种情况：&lt;/h1&gt;&lt;p&gt;1，只读Leader，可确保数据强一致性。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;2，读取Follower。又分两种可能。如果Leader、Follower是强同步的，比如WARO（Write All Read one）。那么可确保数据的强一致性。但是，如果Leader、Follower是弱同步，从Follower读取的有可能是旧数据。这时就确保不了数据的强一致性。" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;fontColor=#0000CC;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="580" y="70" width="190" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-19" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;R1：只读Leader&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontColor=#0000CC;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="90" y="180" width="94" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-20" value="&lt;font color=&quot;#ff0000&quot;&gt;这时候看主从之间的同步是否是强同步&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="245" y="320" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-21" value="&lt;font color=&quot;#0000cc&quot; size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 24px&quot;&gt;R1：读单个分片&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF0000;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="480" y="20" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-23" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontColor=#0000CC;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="380" y="350" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-25" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;rounded=1;dashed=1;fontColor=#0000CC;strokeColor=#FF0000;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="440" y="220" width="14" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="b-UJJuOl_csqAkSLvI6c-26" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;R1：读Follower&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontColor=#0000CC;" vertex="1" parent="0bu39Hk5Qwi8QEBn3dwa-1">
+          <mxGeometry x="400" y="190" width="94" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="esMQXly-VNW4XAkl2j8V" name="第 4 页">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="YXbd3JHZZOBweM8unQBW-0" />
+        <mxCell id="YXbd3JHZZOBweM8unQBW-1" parent="YXbd3JHZZOBweM8unQBW-0" />
       </root>
     </mxGraphModel>
   </diagram>
